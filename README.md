@@ -11,6 +11,32 @@ This is my portfolio website to introduce myself, here I put my skills, projects
 - Typescript
 - Styled Components
  
-## To run this project:
-- yarn install
-- yarn run start
+## Cara Menjalankan Project
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan project ini di lingkungan lokal Anda:
+
+### 1. Prasyarat
+Pastikan Anda sudah menginstal **Node.js** dan **npm** di komputer Anda.
+
+### 2. Instalasi Dependensi
+Karena terdapat perbedaan versi peer dependency pada beberapa paket (seperti `@vercel/analytics` dan `react`), gunakan flag `--legacy-peer-deps` saat melakukan instalasi:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+### 3. Menjalankan Mode Pengembangan
+Setelah instalasi selesai, jalankan perintah berikut untuk memulai server pengembangan:
+
+```bash
+npm start
+```
+Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000).
+
+### 4. Build untuk Produksi
+Untuk membuat bundle produksi yang dioptimalkan, jalankan:
+
+```bash
+npm run build
+```
+Hasil build akan berada di folder `build/`.
