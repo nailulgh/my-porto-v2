@@ -277,8 +277,8 @@
 
 ## 🚢 Phase 5 — Deploy
 
-- [ ] Build production: `npm run build`
-- [ ] Test build lokal
+- [x] Build production: `npm run build`
+- [x] Test build lokal
 - [ ] Deploy ke [Vercel]
 - [ ] Setup custom domain (jika ada)
 - [ ] Update sitemap.xml
@@ -371,6 +371,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Verifikasi Loading Screen dan Analytics integration.
 - Masalah: -
 - Selanjutnya: Phase 6.7 — Testing & Verifikasi menyeluruh.
+
+[10 Mei 2026] — Persiapan Deployment
+- Selesai:
+  - Menyusun panduan deployment lengkap di `docs/deploy.md`.
+  - Finalisasi Phase 6.7 (Testing & Verifikasi).
+  - Mempersiapkan konfigurasi Environment Variables untuk production.
+- Masalah: -
+- Selanjutnya: Melakukan build production dan deployment ke Vercel.
 ```
 
 ---
