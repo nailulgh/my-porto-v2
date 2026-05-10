@@ -7,9 +7,11 @@ export const Container = styled.header`
   align-items: center;
   padding: 1.8rem 10rem;
   
-  background-color: #21212150;
+  background-color: ${({ theme }) => theme.colors.bgOverlay};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderDefault};
+  box-shadow: 0 1px 15px rgba(0, 245, 255, 0.1);
   
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
 
   position: fixed;
   top: 0;
@@ -22,22 +24,33 @@ export const Container = styled.header`
     align-items: center;
     gap: 1.8rem;
     a{
-      color: #FFFF;
+      color: ${({ theme }) => theme.colors.textPrimary};
       padding: 0.6rem;
-      font-family: 'Red Hat Display', sans-serif;
-      font-weight: 500;
+      font-family: ${({ theme }) => theme.fonts.display};
+      font-weight: 400;
       text-transform: uppercase;
-      transition: filter 0.25s;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
 
       &.button{
         padding: 0.6rem 2rem;
+        background-color: ${({ theme }) => theme.colors.accentCyan};
+        color: ${({ theme }) => theme.colors.bgPrimary};
+        border-radius: ${({ theme }) => theme.radius.sm};
+        font-weight: 700;
+        &:hover{
+          background-color: ${({ theme }) => theme.colors.accentCyan};
+          color: ${({ theme }) => theme.colors.bgPrimary};
+          filter: brightness(1.1);
+          box-shadow: ${({ theme }) => theme.shadows.glowCyanStrong};
+        }
       }
 
       &:hover{
-        filter: brightness(0.6);
+        color: ${({ theme }) => theme.colors.accentCyan};
+        text-shadow: ${({ theme }) => theme.shadows.glowCyanSubtle};
       }
     }
-
   }
 
   .menu-container{
@@ -48,7 +61,7 @@ export const Container = styled.header`
   .menu{
     width: 2rem;
     height: 0.2rem;
-    background: #FFFF;
+    background: ${({ theme }) => theme.colors.accentCyan};
     position: relative;
     cursor: pointer;
     display: none;
@@ -83,7 +96,7 @@ export const Container = styled.header`
     position: absolute;
     width: 100%;
     height: 0.2rem;
-    background: #FFFF;
+    background: ${({ theme }) => theme.colors.accentCyan};
     cursor: pointer;
     transition: .6s;
   }
@@ -101,49 +114,47 @@ export const Container = styled.header`
     text-indent: -9999px;
     width: 55px;
     height: 30px;
-    background: var(--green);
+    background: ${({ theme }) => theme.colors.bgSecondary};
+    border: 1px solid ${({ theme }) => theme.colors.accentCyan};
     display: block;
     justify-content: center;
     align-items: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
     position: relative;
     margin-left: auto;
     right: 10px;
+    transition: all 0.3s ease;
   }
 
   @media only screen and (max-width: 800px) {
     label {
-    position: relative;
-   }
+      position: relative;
+    }
   }
 
   label:after {
     content: '';
-    background: #FFF;
+    background: ${({ theme }) => theme.colors.accentCyan};
     width: 20px;
     height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 4px;
-   transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    box-shadow: ${({ theme }) => theme.shadows.glowCyanSubtle};
   }
 
   input:checked + label {
-    background: var(--pink);
+    background: ${({ theme }) => theme.colors.bgSecondary};
+    border-color: ${({ theme }) => theme.colors.accentMagenta};
   }
 
   input:checked + label:after {
-    left: calc(100% - 5px);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+    left: calc(100% - 4px);
     transform: translateX(-100%);
+    background: ${({ theme }) => theme.colors.accentMagenta};
+    box-shadow: 0 0 10px ${({ theme }) => theme.colors.accentMagenta};
   }
 
   @media (max-width: 960px){
@@ -165,14 +176,14 @@ export const Container = styled.header`
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background: var(--blue);
+      background: ${({ theme }) => theme.colors.bgSecondary};
       top: 0;
       left: 0;
       transition: opacity 0.25s;
-      background-color: var(--green);
 
       a.button{
-        background-color: var(--pink);
+        background-color: ${({ theme }) => theme.colors.accentCyan};
+        color: ${({ theme }) => theme.colors.bgPrimary};
       }
 
       &.active{

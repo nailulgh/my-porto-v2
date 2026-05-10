@@ -2,25 +2,27 @@ import { Container } from './styles'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
-import Resume from '../../assets/Vinayak_Singh_Resume.pdf'
+import Resume from '../../assets/Resume_Nailul_Ghufron.pdf'
+import { useTheme } from '../../context/ThemeContext'
+
 export function Header() {
   const [isActive, setActive] = useState(false)
-  function toggleTheme() {
-    let html = document.getElementsByTagName('html')[0]
-    html.classList.toggle('light')
-  }
+  const { isDark, toggleTheme } = useTheme()
+
   function closeMenu() {
     setActive(false)
   }
+
   return (
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>{"<Vinayak "}</span>
-          <span>{" Singh/>"}</span>
+          <span>{"<Nailul "}</span>
+          <span>{" Ghufron/>"}</span>
         </HashLink>
         <input
           onChange={toggleTheme}
+          checked={!isDark}
           className="container_toggle"
           type="checkbox"
           id="switch"

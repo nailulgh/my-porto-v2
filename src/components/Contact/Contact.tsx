@@ -2,28 +2,32 @@ import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg"
 import { Form } from "../Form/Form";
-
+import ScrollAnimation from "react-animate-on-scroll";
 
 export function Contact(){
 
   return(
     <Container id="contact">
-      <header>
-        <h2>Contact</h2>
-        <p>Ready to get started on your project? </p>
-        <p>Contact me now for a Free consultation.</p>
-      </header>
+      <ScrollAnimation animateIn="fadeIn">
+        <header>
+          <h2>Contact</h2>
+          <p>Ready to get started on your project? </p>
+          <p>Contact me now for a Free consultation.</p>
+        </header>
+      </ScrollAnimation>
       <div className="contacts">
-        <div>
-        <a href="mailto:vinayak@vinayaksingh.com"><img src={emailIcon} alt="Email" /></a> 
-          <a href="mailto:vinayak@vinayaksingh.com">vinayak@vinayaksingh.com</a>
-        </div>
-        <div>
-        <a href="tel:+919630576848"><img src={phoneIcon} alt="Phone No" /></a>
-          <a href="tel:+919630576848">(+91) 9630576848</a>
-        </div>  
+        <ScrollAnimation animateIn="fadeInLeft" delay={0.1 * 1000}>
+          <a href="mailto:muhammadnailulghufronmajid@gmail.com"><img src={emailIcon} alt="Email" /></a> 
+          <a href="mailto:muhammadnailulghufronmajid@gmail.com">muhammadnailulghufronmajid@gmail.com</a>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
+          <a href="https://wa.me/6285648719610"><img src={phoneIcon} alt="Phone No" /></a>
+          <a href="https://wa.me/6285648719610">(+62) 856-4871-9610</a>
+        </ScrollAnimation>
       </div>
-      <Form></Form>
+      <ScrollAnimation animateIn="fadeInUp" delay={0.3 * 1000}>
+        <Form></Form>
+      </ScrollAnimation>
     </Container>
   )
 }

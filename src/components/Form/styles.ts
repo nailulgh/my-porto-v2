@@ -18,16 +18,23 @@ export const Container = styled.div`
     width: 100%;
     input, textarea{
       width: 60rem;
-      padding: 1rem 2rem;
-      border-radius: 1.6rem;
+      padding: 1.5rem 2.5rem;
+      border-radius: ${({ theme }) => theme.radius.sm};
       outline: none;
-      border: none;
-      background:none;
-      border: 1px solid #FFF;
-      color: white;
-      font-weight: 600;
+      border: 1px solid ${({ theme }) => theme.colors.borderDefault};
+      background: ${({ theme }) => theme.colors.bgElevated};
+      color: ${({ theme }) => theme.colors.textPrimary};
+      font-family: ${({ theme }) => theme.fonts.body};
+      font-weight: 400;
+      transition: all 0.3s ease;
+      
       &::placeholder{
-        color: #FFF;
+        color: ${({ theme }) => theme.colors.textDisabled};
+      }
+      
+      &:focus {
+        border-color: ${({ theme }) => theme.colors.accentCyan};
+        box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
       }
     }
 
@@ -38,8 +45,29 @@ export const Container = styled.div`
     }
 
     button{
-      padding: 1rem 6rem;
+      margin-top: 2rem;
+      padding: 1.4rem 6rem;
+      background: transparent;
+      border: 1px solid ${({ theme }) => theme.colors.accentCyan};
+      color: ${({ theme }) => theme.colors.accentCyan};
+      border-radius: ${({ theme }) => theme.radius.sm};
+      font-family: ${({ theme }) => theme.fonts.display};
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.2em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      
+      &:hover {
+        background: rgba(0, 245, 255, 0.1);
+        box-shadow: ${({ theme }) => theme.shadows.glowCyanStrong};
+        transform: translateY(-3px);
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   
   }
