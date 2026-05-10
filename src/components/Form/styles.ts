@@ -47,9 +47,9 @@ export const Container = styled.div`
     button{
       margin-top: 2rem;
       padding: 1.4rem 6rem;
-      background: transparent;
-      border: 1px solid ${({ theme }) => theme.colors.accentCyan};
-      color: ${({ theme }) => theme.colors.accentCyan};
+      background: ${({ theme }) => theme.colors.accentMagenta};
+      border: 1px solid ${({ theme }) => theme.colors.accentMagenta};
+      color: #ffffff;
       border-radius: ${({ theme }) => theme.radius.sm};
       font-family: ${({ theme }) => theme.fonts.display};
       font-weight: 700;
@@ -59,8 +59,8 @@ export const Container = styled.div`
       cursor: pointer;
       
       &:hover {
-        background: rgba(0, 245, 255, 0.1);
-        box-shadow: ${({ theme }) => theme.shadows.glowCyanStrong};
+        filter: brightness(1.1);
+        box-shadow: 0 0 20px ${({ theme }) => theme.colors.accentMagenta};
         transform: translateY(-3px);
       }
       

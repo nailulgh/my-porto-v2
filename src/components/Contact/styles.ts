@@ -37,35 +37,35 @@ export const Container = styled.section`
       width: 50%;
       max-width: 40rem;
       gap: 2rem;
-      background-color: ${({ theme }) => theme.colors.bgSecondary};
-      border: 1px solid ${({ theme }) => theme.colors.borderDefault};
+      background-color: ${({ theme }) => theme.colors.accentMagenta};
+      border: 1px solid ${({ theme }) => theme.colors.accentMagenta};
       border-radius: ${({ theme }) => theme.radius.md};
       padding: 1.6rem 2.8rem;
       transition: all 0.3s ease;
       
       img{
         width: 3.5rem;
-        filter: ${({ theme }) => theme.mode === 'dark' 
-          ? `brightness(0) invert(1) drop-shadow(0 0 5px ${theme.colors.accentCyan})` 
-          : 'none'};
+        filter: brightness(0) invert(1);
         transition: all 0.3s ease;
       }
       
       a{
-        color: ${({ theme }) => theme.colors.textPrimary};
-        font-weight: 500;
+        color: #ffffff;
+        font-weight: 700;
         font-family: ${({ theme }) => theme.fonts.mono};
         font-size: 1.4rem;
         transition: color 0.3s ease;
+        text-decoration: none;
       }
       
       &:hover{
-        border-color: ${({ theme }) => theme.colors.accentCyan};
-        box-shadow: ${({ theme }) => theme.shadows.glowCyanMedium};
+        border-color: ${({ theme }) => theme.colors.accentMagenta};
+        box-shadow: 0 0 20px ${({ theme }) => theme.colors.accentMagenta};
         transform: translateY(-5px);
+        filter: brightness(1.1);
         
         a{
-          color: ${({ theme }) => theme.colors.accentCyan};
+          color: #ffffff;
         }
       }
     }

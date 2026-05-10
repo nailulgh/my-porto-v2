@@ -7,6 +7,8 @@ import { GlobalStyle } from './styles/global'
 import { Analytics } from "@vercel/analytics/react"
 import { AppThemeProvider } from './context/ThemeContext'
 import 'react-toastify/dist/ReactToastify.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ProjectsPage } from './pages/ProjectsPage'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -23,16 +25,21 @@ function App() {
   return (
     <AppThemeProvider>
       <GlobalStyle></GlobalStyle>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <Header></Header>
-          <Main></Main>
-          <Analytics />
-          <Footer></Footer>
-        </>
-      )}
+      <BrowserRouter>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <Header></Header>
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+            </Routes>
+            <Analytics />
+            <Footer></Footer>
+          </>
+        )}
+      </BrowserRouter>
     </AppThemeProvider>
   )
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom"
+
 import { Container } from "./styles"
 import ScrollAnimation from "react-animate-on-scroll"
 import Illustration from "../../assets/illustration.svg"
@@ -25,9 +25,9 @@ export function Hero() {
           <p className="small-resume">Building Digital Futures</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-          <BrowserRouter>
+
             <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
-          </BrowserRouter>
+
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
           <div className="social-media"><a

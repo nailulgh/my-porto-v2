@@ -4,20 +4,18 @@ import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github.svg'
 import whatsapp from '../../assets/whatsapp.svg'
 import instagramIcon from '../../assets/instagram.svg'
-import ScrollAnimation from 'react-animate-on-scroll'
 
 export function Footer() {
   return (
     <Container className="footer">
-      <ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <div className="footer-content">
         <a href="https://github.com/nailulgh" className="logo">
-          <span>nailul</span>
-          <span>ghufron</span>
+          <span>{"<Nailul "}</span>
+          <span>{"Ghufron />"}</span>
         </a>
         <div>
           <p>
-            This Website was made with <img src={reactIcon} alt="React" />
-            {/* <span>❤️</span> */}
+            {"BUILT WITH"} <img src={reactIcon} alt="React" />
           </p>
         </div>
         <div className="social-media">
@@ -50,7 +48,7 @@ export function Footer() {
             <img src={instagramIcon} alt="Instagram" />
           </a>
         </div>
-      </ScrollAnimation>
+      </div>
     </Container>
   )
 }

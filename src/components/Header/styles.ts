@@ -7,17 +7,19 @@ export const Container = styled.header`
   align-items: center;
   padding: 1.8rem 10rem;
   
-  background-color: ${({ theme }) => theme.colors.bgOverlay};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.borderDefault};
-  box-shadow: 0 1px 15px rgba(0, 245, 255, 0.1);
-  
-  backdrop-filter: blur(10px);
+  /* Glassmorphism: Translucent & Borderless */
+  background-color: ${({ theme }) => theme.mode === 'dark' ? 'rgba(10, 0, 20, 0.2)' : 'rgba(238, 241, 248, 0.2)'};
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: none;
+  box-shadow: none;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
+  transition: all 0.3s ease;
 
   nav{
     display: flex;

@@ -96,7 +96,13 @@ export function About() {
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.22 * 1000}>
-          <img src={profil} alt="Muhammad Nailul Ghufron Majid" />
+          <div className="image-container">
+            <div className="cyber-ring"></div>
+            <img src={profil} alt="Muhammad Nailul Ghufron Majid" className="profile-img" />
+            <img src={reactIcon} alt="React" className="floating-icon icon-1" />
+            <img src={typescriptIcon} alt="TypeScript" className="floating-icon icon-2" />
+            <img src={python} alt="Python" className="floating-icon icon-3" />
+          </div>
         </ScrollAnimation>
       </div>
     </Container>

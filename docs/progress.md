@@ -103,7 +103,7 @@
 
 ### 6.1 — Setup GitHub API & Data Layer
 
-- [ ] **Buat file `src/data/github.ts`**
+- [x] **Buat file `src/data/github.ts`**
   - Definisikan fungsi `fetchMyRepos()` menggunakan GitHub REST API:
     ```
     GET https://api.github.com/users/nailulgh/repos?per_page=100&sort=updated&type=owner
@@ -112,7 +112,7 @@
   - Urutkan: berdasarkan `stargazers_count` desc, lalu `updated_at` desc
   - Kembalikan tipe `GitHubRepo[]`
 
-- [ ] **Buat TypeScript interface `GitHubRepo`** di `src/@types/github.ts`:
+- [x] **Buat TypeScript interface `GitHubRepo`** di `src/@types/github.ts`:
   ```typescript
   interface GitHubRepo {
     id: number;
@@ -131,13 +131,13 @@
   }
   ```
 
-- [ ] **Buat custom hook `src/hooks/useGitHubRepos.ts`**:
+- [x] **Buat custom hook `src/hooks/useGitHubRepos.ts`**:
   - State: `repos`, `loading`, `error`
   - Fetch otomatis saat hook dipanggil
   - Cache hasil di `sessionStorage` agar tidak fetch ulang tiap render
   - Export: `{ repos, loading, error }`
 
-- [ ] **Opsional: Setup GitHub Personal Access Token (PAT)**
+- [x] **Opsional: Setup GitHub Personal Access Token (PAT)**
   - Buat file `.env` di root project
   - Tambahkan: `REACT_APP_GITHUB_TOKEN=ghp_xxxxx`
   - Gunakan di header fetch untuk rate limit lebih tinggi (60 → 5000 req/jam)
@@ -149,17 +149,17 @@
 
 > File: `src/components/Project/ProjectFilter.tsx`
 
-- [ ] **Buat komponen `ProjectFilter`** yang menampilkan tombol filter berdasarkan:
+- [x] **Buat komponen `ProjectFilter`** yang menampilkan tombol filter berdasarkan:
   - **Bahasa**: ambil dari `repo.language` (JavaScript, TypeScript, Python, dll)
   - **Topik/Tag**: ambil dari `repo.topics` (contoh: `react`, `api`, `fullstack`)
   - Tombol **"ALL"** untuk reset filter
 
-- [ ] **Logika filter di parent component**:
+- [x] **Logika filter di parent component**:
   - State: `activeLanguage`, `activeTopic`
   - Filter repos: `repos.filter(r => r.language === activeLanguage || ...)`
   - Filter tidak mengubah urutan — hanya menyembunyikan yang tidak cocok
 
-- [ ] **Styling filter buttons** — sesuai cyberpunk theme:
+- [x] **Styling filter buttons** — sesuai cyberpunk theme:
   - Default: `border: 1px solid borderDefault`, font mono
   - Active: `border-color: accentCyan`, `box-shadow: glow.boxMd`, `color: accentCyan`
   - Tambah label prefix: `[ JS ]`, `[ TS ]`, `[ PY ]` dst
@@ -170,14 +170,14 @@
 
 > File: `src/components/Project/ProjectCard.tsx`
 
-- [ ] **Buat komponen `ProjectCard`** yang menerima props `repo: GitHubRepo`:
+- [x] **Buat komponen `ProjectCard`** yang menerima props `repo: GitHubRepo`:
   - Header: nama repo dengan prefix `// ` (contoh: `// portfolio-v2`)
   - Body: deskripsi repo (atau fallback `"No description provided."`)
   - Footer kiri: badge bahasa (`language`) + jumlah bintang (`⭐ stargazers_count`)
   - Footer kanan: link ke GitHub repo, dan link live demo jika `homepage` ada
   - Tag/topics: tampilkan sebagai badge kecil, max 3 tag (sisanya disembunyikan)
 
-- [ ] **Styling sesuai cyberpunk theme**:
+- [x] **Styling sesuai cyberpunk theme**:
   - Background: `theme.colors.bgSecondary`
   - Border: `1px solid theme.colors.borderDefault`
   - Hover: `borderColor → borderActive`, `boxShadow → glow.boxMd`
@@ -185,8 +185,8 @@
   - Bahasa badge: warna sesuai bahasa (JS=yellow, TS=cyan, Python=green, dll)
   - Transisi: `transition: all 0.2s ease`
 
-- [ ] **Loading state**: tampilkan skeleton card (shimmer effect) saat data belum ada
-- [ ] **Error state**: tampilkan pesan error dengan style cyberpunk jika fetch gagal
+- [x] **Loading state**: tampilkan skeleton card (shimmer effect) saat data belum ada
+- [x] **Error state**: tampilkan pesan error dengan style cyberpunk jika fetch gagal
 
 ---
 
@@ -194,18 +194,18 @@
 
 > File: `src/components/Project/index.tsx` (atau `ProjectSection.tsx`)
 
-- [ ] **Modifikasi section Projects yang sudah ada**:
+- [x] **Modifikasi section Projects yang sudah ada**:
   - Ganti data statis dengan data dari `useGitHubRepos()`
   - Tampilkan hanya **6 repo pertama** (setelah difilter & diurutkan)
   - Grid layout: 3 kolom di desktop, 2 di tablet, 1 di mobile
 
-- [ ] **Tambah tombol "VIEW ALL PROJECTS"**:
+- [x] **Tambah tombol "VIEW ALL PROJECTS"**:
   - Styling: tombol cyberpunk besar, border cyan, hover glow
   - Label: `[ VIEW ALL PROJECTS →  ]`
   - Arahkan ke route `/projects` menggunakan `react-router-dom`
   - Posisi: di bawah grid 6 kartu, center-aligned
 
-- [ ] **Tambah loading skeleton** saat data sedang di-fetch (6 placeholder cards)
+- [x] **Tambah loading skeleton** saat data sedang di-fetch (6 placeholder cards)
 
 ---
 
@@ -213,49 +213,49 @@
 
 > File baru: `src/pages/ProjectsPage.tsx`
 
-- [ ] **Buat file `src/pages/ProjectsPage.tsx`**:
+- [x] **Buat file `src/pages/ProjectsPage.tsx`**:
   - Layout: halaman penuh dengan header section dan grid project
   - Gunakan hook `useGitHubRepos()` yang sama (data sudah ter-cache)
 
-- [ ] **Header halaman**:
+- [x] **Header halaman**:
   - Judul: `// MY_PROJECTS` (font Orbitron, glow cyan)
   - Subtitle: `"All repositories — non-fork, owned by @nailulgh"`
   - Jumlah total repo yang ditampilkan: `[XX REPOSITORIES FOUND]`
 
-- [ ] **Komponen filter terintegrasi** di atas grid:
+- [x] **Komponen filter terintegrasi** di atas grid:
   - Filter bahasa + topik (dari `ProjectFilter.tsx`)
   - Tampilkan jumlah hasil setelah difilter: `[XX RESULTS]`
 
-- [ ] **Grid semua repo** (tanpa batasan 6):
+- [x] **Grid semua repo** (tanpa batasan 6):
   - Gunakan `ProjectCard.tsx` yang sama
   - Grid: 3 kolom desktop, 2 tablet, 1 mobile
   - Tambah animasi fade-in staggered saat card muncul
 
-- [ ] **Tombol kembali ke halaman utama**:
+- [x] **Tombol kembali ke halaman utama**:
   - Di bagian atas halaman: `[ ← BACK TO MAIN ]`
   - Styling: lebih kecil, subtle, tapi tetap cyberpunk
 
-- [ ] **Setup routing di `src/App.tsx`**:
+- [x] **Setup routing di `src/App.tsx`**:
   ```typescript
   import { BrowserRouter, Routes, Route } from 'react-router-dom';
   // Tambah route:
   <Route path="/projects" element={<ProjectsPage />} />
   ```
 
-- [ ] **Tambah link `/projects` di navigasi Header** (opsional tapi disarankan)
+- [x] **Tambah link `/projects` di navigasi Header** (opsional tapi disarankan)
 
 ---
 
 ### 6.6 — Polish & Edge Cases
 
-- [ ] **Handle repo tanpa deskripsi**: fallback text `"— no description —"`
-- [ ] **Handle repo tanpa language**: tampilkan badge `OTHER` atau sembunyikan badge
-- [ ] **Handle repo private**: API public hanya return repo public — tidak perlu khusus ditangani
-- [ ] **Rate limit GitHub API**: tampilkan pesan khusus jika terkena rate limit (403/429):
+- [x] **Handle repo tanpa deskripsi**: fallback text `"— no description —"`
+- [x] **Handle repo tanpa language**: tampilkan badge `OTHER` atau sembunyikan badge
+- [x] **Handle repo private**: API public hanya return repo public — tidak perlu khusus ditangani
+- [x] **Rate limit GitHub API**: tampilkan pesan khusus jika terkena rate limit (403/429):
   - Pesan: `"// RATE_LIMIT_EXCEEDED — try again in 60 minutes"`
-- [ ] **Empty state saat filter**: tampilkan pesan `"// NO_REPOS_FOUND — reset filter"` dengan tombol reset
-- [ ] **Responsiveness**: pastikan filter button wrap dengan baik di mobile
-- [ ] **Accessibility**: tambah `aria-label` pada tombol filter dan link repo
+- [x] **Empty state saat filter**: tampilkan pesan `"// NO_REPOS_FOUND — reset filter"` dengan tombol reset
+- [x] **Responsiveness**: pastikan filter button wrap dengan baik di mobile
+- [x] **Accessibility**: tambah `aria-label` pada tombol filter dan link repo
 
 ---
 
@@ -300,6 +300,59 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Perbaikan bug kontras warna (tombol Resume, ikon GitHub di Light Mode, visibilitas Toggle Switch).
 - Masalah: -
 - Selanjutnya: Phase 6 — GitHub Live Projects Integration.
+
+[10 Mei 2026] — Phase 6.1 Setup GitHub API
+- Selesai:
+  - Setup `.env` untuk GitHub PAT.
+  - Tambahkan `.env` ke `.gitignore`.
+  - Buat interface `GitHubRepo` di `src/@types/github.ts`.
+  - Buat `fetchMyRepos` di `src/data/github.ts`.
+  - Buat hook `useGitHubRepos` di `src/hooks/useGitHubRepos.ts`.
+- Masalah: -
+- Selanjutnya: Phase 6.2 — Komponen Filter & Sort.
+
+[10 Mei 2026] — Phase 6.2 Komponen Filter & Sort
+- Selesai:
+  - Buat komponen `ProjectFilter` untuk filtering berdasarkan bahasa dan topik.
+  - Buat hook `useProjectFilter` untuk menyiapkan logika filter yang akan dipakai parent.
+  - Implementasi styling sesuai dengan spesifikasi cyberpunk theme (border neon, glow).
+- Masalah: -
+- Selanjutnya: Phase 6.3 — Project Card Component.
+
+[10 Mei 2026] — Phase 6.3 Project Card Component
+- Selesai:
+  - Buat komponen \`ProjectCard\` untuk merender setiap repositori.
+  - Implementasi desain dengan hover glow, dynamic language badge, serta dark/light mode untuk icon.
+  - Tambahkan komponen \`ProjectCardSkeleton\` untuk state loading menggunakan animasi shimmer.
+  - Tambahkan \`ProjectCardError\` jika gagal fetch.
+- Masalah: -
+- Selanjutnya: Phase 6.4 — Section Projects di Halaman Utama (Preview 6 Repo).
+
+[10 Mei 2026] — Phase 6.4 Section Projects Halaman Utama
+- Selesai:
+  - Mengintegrasikan \`useGitHubRepos()\` ke dalam \`Project.tsx\` untuk menampilkan 6 data repositori terbaru.
+  - Memasangkan \`ProjectCard\`, \`ProjectCardSkeleton\`, dan \`ProjectCardError\` pada layout grid.
+  - Menambahkan tombol [ VIEW ALL PROJECTS → ] menggunakan \`Link\` dari \`react-router-dom\`.
+- Masalah: -
+- Selanjutnya: Phase 6.5 — Halaman /projects (All Projects Page).
+
+[10 Mei 2026] — Phase 6.5 Halaman All Projects
+- Selesai:
+  - Buat `src/pages/ProjectsPage.tsx` dengan integrasi routing `react-router-dom`.
+  - Pasang komponen filter dan implementasi state filtering dari `useProjectFilter()`.
+  - Atur `Header.tsx` untuk menggunakan `#` anchor link berbarengan dengan routing root (`/`).
+  - Tambah navigasi 'All Projects' di header.
+- Masalah: -
+- Selanjutnya: Phase 6.6 — Edge Cases & Detail Tambahan.
+
+[10 Mei 2026] — Phase 6.6 Polish & Edge Cases
+- Selesai:
+  - Menyempurnakan fallback text untuk repository tanpa bahasa atau deskripsi di `ProjectCard.tsx`.
+  - Menambahkan _custom error_ khusus untuk error 403/429 jika terkena *Rate Limit API* di `github.ts`.
+  - Mengimplementasi `EmptyStateContainer` lengkap dengan tombol fungsi "RESET FILTER".
+  - Memastikan *responsiveness* (wrap button) serta *accessibility* (`aria-label`) di komponen yang relevan.
+- Masalah: -
+- Selanjutnya: Phase 6.7 — Testing & Verifikasi.
 ```
 
 ---
