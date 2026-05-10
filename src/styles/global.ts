@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     background-color: ${({ theme }) => theme.colors.bgPrimary};
     color: ${({ theme }) => theme.colors.textPrimary};
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300f5ff" stroke="%23140028" stroke-width="1.5" d="M2 2l14 6-5 2-2 5z"/></svg>') 2 2, auto;
+    cursor: none;
     
     /* Cyberpunk Background Texture */
     background-image: ${({ theme }) => theme.mode === 'light' ? `
@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   }
 
   a, button, .button, input[type="submit"], input[type="checkbox"] + label {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ff00aa" stroke="%23140028" stroke-width="1.5" d="M2 2l14 6-5 2-2 5z"/></svg>') 2 2, pointer !important;
+    cursor: none !important;
   }
 
   h1, h2, h3, h4, h5, h6 {

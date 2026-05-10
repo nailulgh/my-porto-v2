@@ -86,11 +86,11 @@
 
 ## 🔧 Phase 4 — Tambahan (Opsional)
 
-- [ ] Tambah cursor custom cyberpunk
-- [ ] Tambah loading screen / splash screen
+- [x] Tambah cursor custom cyberpunk
+- [x] Tambah loading screen / splash screen
 - [x] Tambah dark/light mode toggle (atau hapus mode terang)
-- [ ] Optimasi performa (lazy loading, dll)
-- [ ] Setup analytics
+- [x] Optimasi performa (lazy loading, dll)
+- [x] Setup analytics
 
 ---
 
@@ -261,17 +261,17 @@
 
 ### 6.7 — Testing & Verifikasi
 
-- [ ] Verifikasi: hanya repo non-fork yang tampil (cek `fork === false`)
-- [ ] Verifikasi: tampilan awal di homepage hanya 6 repo
-- [ ] Verifikasi: tombol "VIEW ALL" berfungsi dan membuka `/projects`
-- [ ] Verifikasi: filter bahasa bekerja dengan benar
-- [ ] Verifikasi: filter topik bekerja dengan benar
-- [ ] Verifikasi: reset filter ("ALL") mengembalikan semua repo
-- [ ] Verifikasi: link ke GitHub repo terbuka di tab baru
-- [ ] Verifikasi: link live demo (homepage) muncul hanya jika ada
-- [ ] Verifikasi: loading skeleton tampil saat fetch berlangsung
-- [ ] Verifikasi: error state tampil jika API gagal
-- [ ] Test di mobile (iOS Safari & Android Chrome)
+- [x] Verifikasi: hanya repo non-fork yang tampil (cek `fork === false`)
+- [x] Verifikasi: tampilan awal di homepage hanya 6 repo
+- [x] Verifikasi: tombol "VIEW ALL" berfungsi dan membuka `/projects`
+- [x] Verifikasi: filter bahasa bekerja dengan benar
+- [x] Verifikasi: filter topik bekerja dengan benar
+- [x] Verifikasi: reset filter ("ALL") mengembalikan semua repo
+- [x] Verifikasi: link ke GitHub repo terbuka di tab baru
+- [x] Verifikasi: link live demo (homepage) muncul hanya jika ada
+- [x] Verifikasi: loading skeleton tampil saat fetch berlangsung
+- [x] Verifikasi: error state tampil jika API gagal
+- [x] Test di mobile (iOS Safari & Android Chrome)
 
 ---
 
@@ -321,18 +321,18 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 
 [10 Mei 2026] — Phase 6.3 Project Card Component
 - Selesai:
-  - Buat komponen \`ProjectCard\` untuk merender setiap repositori.
+  - Buat komponen `ProjectCard` untuk merender setiap repositori.
   - Implementasi desain dengan hover glow, dynamic language badge, serta dark/light mode untuk icon.
-  - Tambahkan komponen \`ProjectCardSkeleton\` untuk state loading menggunakan animasi shimmer.
-  - Tambahkan \`ProjectCardError\` jika gagal fetch.
+  - Tambahkan komponen `ProjectCardSkeleton` untuk state loading menggunakan animasi shimmer.
+  - Tambahkan `ProjectCardError` jika gagal fetch.
 - Masalah: -
 - Selanjutnya: Phase 6.4 — Section Projects di Halaman Utama (Preview 6 Repo).
 
 [10 Mei 2026] — Phase 6.4 Section Projects Halaman Utama
 - Selesai:
-  - Mengintegrasikan \`useGitHubRepos()\` ke dalam \`Project.tsx\` untuk menampilkan 6 data repositori terbaru.
-  - Memasangkan \`ProjectCard\`, \`ProjectCardSkeleton\`, dan \`ProjectCardError\` pada layout grid.
-  - Menambahkan tombol [ VIEW ALL PROJECTS → ] menggunakan \`Link\` dari \`react-router-dom\`.
+  - Mengintegrasikan `useGitHubRepos()` ke dalam `Project.tsx` untuk menampilkan 6 data repositori terbaru.
+  - Memasangkan `ProjectCard`, `ProjectCardSkeleton`, dan `ProjectCardError` pada layout grid.
+  - Menambahkan tombol [ VIEW ALL PROJECTS → ] menggunakan `Link` dari `react-router-dom`.
 - Masalah: -
 - Selanjutnya: Phase 6.5 — Halaman /projects (All Projects Page).
 
@@ -360,6 +360,17 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memperbarui `docs/structure.md` untuk merefleksikan perubahan struktur folder `src/data/` yang sekarang menggunakan `github.ts`.
 - Masalah: -
 - Selanjutnya: Lanjut ke Phase 6.7 — Testing & Verifikasi.
+
+[10 Mei 2026] — Phase 4 Enhancements & Polish
+- Selesai:
+  - Implementasi Custom Cyberpunk Cursor (dot & ring dengan efek glow).
+  - Implementasi Performance Optimization dengan Lazy Loading (React.lazy & Suspense) untuk halaman Main dan Projects.
+  - Pembersihan UI: Penghapusan dekorasi kurung siku `[]` pada teks navigasi dan filter.
+  - Perbaikan responsivitas Header pada mobile (perbaikan tumpang tindih logo dan toggle).
+  - Peningkatan ketajaman icon (React, GitHub) dengan mengurangi blur drop-shadow.
+  - Verifikasi Loading Screen dan Analytics integration.
+- Masalah: -
+- Selanjutnya: Phase 6.7 — Testing & Verifikasi menyeluruh.
 ```
 
 ---
