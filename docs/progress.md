@@ -394,9 +394,9 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 [10 Mei 2026] — Post-Deployment Fix (reCAPTCHA & Formspree)
 - Selesai:
   - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables secara eksklusif.
-  - Memperbaiki error ESLint *Rules of Hooks* (pemindahan posisi hooks di atas conditional returns).
+  - Memperbaiki error ESLint *JSX comment nodes* (escaping karakter `//`).
   - Memberikan instruksi error yang jelas di UI.
-- Masalah: Build Vercel gagal karena pelanggaran *Rules of Hooks*.
+- Masalah: Build Vercel gagal karena teks `//` dianggap sebagai komentar JSX.
 - Selanjutnya: Menunggu user menginput keys ke Vercel Settings > Environment Variables.
 ```
 

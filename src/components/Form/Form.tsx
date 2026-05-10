@@ -37,7 +37,7 @@ export function Form() {
       <Container id="contact">
         <h2>Configuration Missing</h2>
         <p style={{ color: '#ff00aa', fontFamily: 'monospace' }}>
-          // ERROR: Environment variables not found.<br />
+          {"// ERROR: Environment variables not found."}<br />
           Please add REACT_APP_FORMSPREE_ID and REACT_APP_RECAPTCHA_SITE_KEY to your Vercel project settings.
         </p>
       </Container>
