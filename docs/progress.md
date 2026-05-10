@@ -393,11 +393,11 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 
 [10 Mei 2026] — Post-Deployment Fix (reCAPTCHA & Formspree)
 - Selesai:
-  - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables secara eksklusif (tanpa fallback).
-  - Menghapus fallback keys milik project asal untuk mencegah konflik.
-  - Memberikan panduan verifikasi domain di konsol Google reCAPTCHA.
-- Masalah: reCAPTCHA masih menunjukkan "Invalid domain" (kemungkinan domain belum didaftarkan di admin console atau cache deployment).
-- Selanjutnya: Meminta user memverifikasi daftar domain di Google reCAPTCHA Admin.
+  - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables secara eksklusif.
+  - Menambahkan *graceful error state* agar aplikasi tidak crash jika kunci belum diset di Vercel.
+  - Memberikan instruksi error yang jelas di UI.
+- Masalah: Runtime error pada Formspree karena `process.env` tidak terbaca di Vercel (user belum memasukkan keys ke dashboard Vercel).
+- Selanjutnya: Menunggu user menginput keys ke Vercel Settings > Environment Variables.
 ```
 
 ---

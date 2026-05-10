@@ -6,10 +6,23 @@ import { useEffect, useState } from 'react'
 import validator from 'validator'
 
 export function Form() {
-  const [state, handleSubmit] = useForm(process.env.REACT_APP_FORMSPREE_ID!)
+  const formKey = process.env.REACT_APP_FORMSPREE_ID || 'placeholder'
+  const [state, handleSubmit] = useForm(formKey)
   const [validEmail, setValidEmail] = useState(false)
   const [isHuman, setIsHuman] = useState(false)
   const [message, setMessage] = useState('')
+
+  if (!process.env.REACT_APP_FORMSPREE_ID || !process.env.REACT_APP_RECAPTCHA_SITE_KEY) {
+    return (
+      <Container id="contact">
+        <h2>Configuration Missing</h2>
+        <p style={{ color: '#ff00aa', fontFamily: 'monospace' }}>
+          // ERROR: Environment variables not found.<br />
+          Please add REACT_APP_FORMSPREE_ID and REACT_APP_RECAPTCHA_SITE_KEY to your Vercel project settings.
+        </p>
+      </Container>
+    )
+  }
   function verifyEmail(email: string) {
     if (validator.isEmail(email)) {
       setValidEmail(true)
