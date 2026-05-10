@@ -68,6 +68,8 @@ Setiap kali Anda melakukan `git push` ke branch `main`, Vercel akan otomatis mel
 
 - **Data GitHub tidak muncul?** 
   Cek kembali apakah `REACT_APP_GITHUB_TOKEN` sudah diset dengan benar di dashboard Vercel dan pastikan token tersebut belum expired.
+- **Build gagal karena peer dependency?**
+  Project ini membutuhkan flag `--legacy-peer-deps`. Pastikan file `.npmrc` sudah ada di root project dengan isi `legacy-peer-deps=true`.
 - **Error 404 saat refresh halaman?**
   Aplikasi ini menggunakan `react-router`. Vercel otomatis menangani ini jika menggunakan preset "Create React App". Jika tidak, buat file `vercel.json` di root:
   ```json

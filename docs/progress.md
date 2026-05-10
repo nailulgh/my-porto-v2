@@ -380,13 +380,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: Error saat deploy di Vercel (kemungkinan masalah routing SPA atau konflik direktori).
 - Selanjutnya: Melakukan build production dan deployment ke Vercel.
 
-[10 Mei 2026] — Deployment Troubleshooting
+[10 Mei 2026] — Deployment Troubleshooting (Update)
 - Selesai:
   - Membuat `vercel.json` untuk menangani SPA routing (rewrites).
   - Menghapus direktori kosong `src/pages/ProjectsPage` yang berpotensi konflik dengan `ProjectsPage.tsx`.
+  - Membuat file `.npmrc` dengan `legacy-peer-deps=true` untuk mengatasi konflik dependensi yang menyebabkan instalasi tertahan.
+  - Menambahkan `"packageManager": "npm@..."` di `package.json` untuk memastikan Vercel menggunakan NPM, bukan Yarn.
   - Verifikasi build lokal (berhasil).
-  - Menyarankan penggunaan `CI=false` untuk menghindari build gagal karena warning.
-- Masalah: Vercel menggunakan Yarn secara otomatis padahal project menggunakan NPM.
+- Masalah: Instalasi dependensi di Vercel tertahan karena konflik peer dependency.
 - Selanjutnya: Mencoba deploy ulang di Vercel.
 ```
 
