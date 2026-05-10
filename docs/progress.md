@@ -279,11 +279,12 @@
 
 - [x] Build production: `npm run build`
 - [x] Test build lokal
-- [ ] Deploy ke [Vercel]
-- [ ] Setup custom domain (jika ada)
-- [ ] Update sitemap.xml
-- [ ] Share link!
+- [x] Deploy ke [Vercel]
+- [x] Setup custom domain (jika ada)
+- [x] Update sitemap.xml
+- [x] Share link!
 
+nama situs: [https://muhammadnailulghufronmajid.vercel.app/](https://muhammadnailulghufronmajid.vercel.app/)
 ---
 
 ## 📋 Catatan Sesi
@@ -389,6 +390,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Verifikasi build lokal (berhasil).
 - Masalah: Instalasi dependensi di Vercel tertahan karena konflik peer dependency.
 - Selanjutnya: Mencoba deploy ulang di Vercel.
+
+[10 Mei 2026] — Post-Deployment Fix (reCAPTCHA & Formspree)
+- Selesai:
+  - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables.
+  - Memindahkan reCAPTCHA Site Key dan Formspree ID ke `.env`.
+  - Update `docs/deploy.md` dengan instruksi cara mendapatkan Site Key baru untuk domain Vercel.
+- Masalah: "Invalid domain for site key" pada reCAPTCHA (karena key lama milik project asal).
+- Selanjutnya: Selesai! Menunggu user mengupdate environment variables di Vercel.
 ```
 
 ---

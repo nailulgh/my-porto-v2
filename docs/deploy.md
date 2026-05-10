@@ -36,10 +36,18 @@ Vercel adalah cara termudah untuk mendeploy aplikasi React (CRA).
    - **Root Directory**: `./`
 5. **Environment Variables (SANGAT PENTING)**:
    Agar fitur GitHub Projects tidak terkena rate limit, Anda **WAJIB** menambahkan token GitHub.
-   - Di bagian **Environment Variables**, tambahkan:
-     - **Key**: `REACT_APP_GITHUB_TOKEN`
-     - **Value**: `[Isi dengan Personal Access Token Anda]`
-     *(Cara buat token: GitHub Settings > Developer Settings > Personal Access Tokens > Tokens classic)*.
+    - Di bagian **Environment Variables**, tambahkan:
+      - **Key**: `REACT_APP_GITHUB_TOKEN`
+        **Value**: `[Personal Access Token GitHub Anda]`
+      - **Key**: `REACT_APP_RECAPTCHA_SITE_KEY`
+        **Value**: `[Site Key Google reCAPTCHA v2 Anda]`
+      - **Key**: `REACT_APP_FORMSPREE_ID`
+        **Value**: `[ID Formspree Anda (8 digit terakhir URL form)]`
+
+    > **Catatan**:
+    > - Buat token GitHub di Settings > Developer Settings > PAT (Classic).
+    > - Buat reCAPTCHA di [google.com/recaptcha](https://www.google.com/recaptcha/admin/). Pilih **v2 "I'm not a robot" Checkbox**. Tambahkan domain `localhost` dan `muhammadnailulghufronmajid.vercel.app` ke daftar allowed domains.
+    > - Buat form di [formspree.io](https://formspree.io/) untuk menerima pesan dari pengunjung.
 6. **Deploy**: Klik tombol **"Deploy"**.
 
 ---
