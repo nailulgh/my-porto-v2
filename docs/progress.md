@@ -393,11 +393,11 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 
 [10 Mei 2026] — Post-Deployment Fix (reCAPTCHA & Formspree)
 - Selesai:
-  - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables.
-  - Memindahkan reCAPTCHA Site Key dan Formspree ID ke `.env`.
-  - Update `docs/deploy.md` dengan instruksi cara mendapatkan Site Key baru untuk domain Vercel.
-- Masalah: "Invalid domain for site key" pada reCAPTCHA (karena key lama milik project asal).
-- Selanjutnya: Selesai! Menunggu user mengupdate environment variables di Vercel.
+  - Refaktor `src/components/Form/Form.tsx` untuk menggunakan environment variables secara eksklusif (tanpa fallback).
+  - Menghapus fallback keys milik project asal untuk mencegah konflik.
+  - Memberikan panduan verifikasi domain di konsol Google reCAPTCHA.
+- Masalah: reCAPTCHA masih menunjukkan "Invalid domain" (kemungkinan domain belum didaftarkan di admin console atau cache deployment).
+- Selanjutnya: Meminta user memverifikasi daftar domain di Google reCAPTCHA Admin.
 ```
 
 ---
