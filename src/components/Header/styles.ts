@@ -6,6 +6,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 10rem;
+  gap: 2rem;
   
   /* Glassmorphism: Translucent & Borderless */
   background-color: ${({ theme }) => theme.mode === 'dark' ? 'rgba(10, 0, 20, 0.2)' : 'rgba(238, 241, 248, 0.2)'};
@@ -124,13 +125,25 @@ export const Container = styled.header`
     border-radius: 100px;
     position: relative;
     margin-left: auto;
-    right: 10px;
     transition: all 0.3s ease;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 960px) {
+    padding: 1.8rem 2rem;
+    gap: 1rem;
+
+    .logo {
+      font-size: 2.4rem;
+    }
+
     label {
-      position: relative;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .logo {
+      font-size: 1.8rem;
     }
   }
 
@@ -160,7 +173,7 @@ export const Container = styled.header`
   }
 
   @media (max-width: 960px){
-    padding: 1.8rem 3rem;
+    /* padding handled above */
 
     .menu{
       display: block;

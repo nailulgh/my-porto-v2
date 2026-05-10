@@ -12,9 +12,9 @@ const FilterContainer = styled.div`
 
 const FilterBtn = styled.button<{ $active: boolean }>`
   background: transparent;
-  border: 1px solid ${({ theme, $active }) => 
+  border: 1px solid ${({ theme, $active }) =>
     $active ? theme.colors.accentCyan : theme.colors.borderDefault};
-  color: ${({ theme, $active }) => 
+  color: ${({ theme, $active }) =>
     $active ? theme.colors.accentCyan : theme.colors.textSecondary};
   font-family: ${({ theme }) => theme.fonts.mono};
   font-size: 1rem;
@@ -64,14 +64,14 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
 }) => {
   return (
     <FilterContainer>
-      <FilterBtn 
-        $active={activeLanguage === null && activeTopic === null} 
+      <FilterBtn
+        $active={activeLanguage === null && activeTopic === null}
         onClick={() => {
           onSelectLanguage(null);
           onSelectTopic(null);
         }}
       >
-        [ ALL ]
+        ALL
       </FilterBtn>
 
       {languages.map(lang => (
@@ -84,7 +84,7 @@ export const ProjectFilter: React.FC<ProjectFilterProps> = ({
           }}
           aria-label={`Filter by ${lang}`}
         >
-          [ {getLanguagePrefix(lang)} ]
+          {getLanguagePrefix(lang)}
         </FilterBtn>
       ))}
 

@@ -52,7 +52,7 @@ Portfolio-v2/
 │   ├── progress.md
 │   └── myresume.md
 │
-├── CLAUDE.md                ← Panduan AI agent
+├── GEMINI.md                ← Panduan AI agent
 ├── package.json
 ├── tsconfig.json
 └── package-lock.json
@@ -155,9 +155,7 @@ Project asli biasanya punya file data statis, misalnya:
 
 ```
 src/data/
-├── projects.ts    ← Daftar project portfolio
-├── skills.ts      ← Daftar skills & technologies
-└── personal.ts    ← Info pribadi (nama, bio, dll)
+└── github.ts      ← API GitHub Repo data
 ```
 
 > Isi data files ini dengan informasi kamu sendiri saat onboarding.

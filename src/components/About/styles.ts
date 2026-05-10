@@ -41,9 +41,9 @@ export const Container = styled.section`
     }
 
     img{
-      width: 3.4rem;
+      width: 3.8rem;
       margin-bottom: 0.8rem;
-      filter: drop-shadow(0 0 5px ${({ theme }) => theme.colors.accentCyan});
+      filter: drop-shadow(0 0 2px ${({ theme }) => theme.colors.accentCyan});
       transition: all 0.3s ease;
     }
     
@@ -150,7 +150,7 @@ export const Container = styled.section`
       width: 45px;
       height: 45px;
       z-index: 3;
-      filter: drop-shadow(0 0 8px ${({ theme }) => theme.colors.accentCyan});
+      filter: drop-shadow(0 0 3px ${({ theme }) => theme.colors.accentCyan});
     }
 
     .icon-1 {

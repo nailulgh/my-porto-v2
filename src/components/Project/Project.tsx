@@ -62,7 +62,7 @@ export function Project() {
             </ScrollAnimation>
           </>
         )}
-        
+
         {error && (
           <div style={{ gridColumn: '1 / -1' }}>
             <ProjectCardError message={error} />
@@ -75,11 +75,11 @@ export function Project() {
           </ScrollAnimation>
         ))}
       </div>
-      
+
       {!loading && !error && repos.length > 0 && (
         <ButtonWrapper>
           <ViewAllButton to="/projects">
-            [ VIEW ALL PROJECTS → ]
+            VIEW ALL PROJECTS →
           </ViewAllButton>
         </ButtonWrapper>
       )}

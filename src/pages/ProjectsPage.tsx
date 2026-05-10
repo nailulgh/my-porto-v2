@@ -120,17 +120,17 @@ export function ProjectsPage() {
 
   return (
     <PageContainer>
-      <BackButton to="/">[ ← BACK TO MAIN ]</BackButton>
+      <BackButton to="/">← BACK TO MAIN</BackButton>
 
       <HeaderSection>
         <h1>MY PROJECTS</h1>
-        <p>All repositories — non-fork, owned by @nailulgh</p>
-        {!loading && <p className="count">[{repos.length} REPOSITORIES FOUND]</p>}
+        <p>All repositories, owned by @nailulgh</p>
+        {!loading && <p className="count">{repos.length} REPOSITORIES FOUND</p>}
       </HeaderSection>
 
       {!loading && !error && repos.length > 0 && (
         <FilterSection>
-          <ProjectFilter 
+          <ProjectFilter
             languages={filter.languages}
             topics={filter.topics}
             activeLanguage={filter.activeLanguage}
@@ -138,7 +138,7 @@ export function ProjectsPage() {
             onSelectLanguage={filter.setActiveLanguage}
             onSelectTopic={filter.setActiveTopic}
           />
-          <div className="results-count">[{filter.filteredRepos.length} RESULTS]</div>
+          <div className="results-count">{filter.filteredRepos.length} RESULTS</div>
         </FilterSection>
       )}
 
@@ -163,7 +163,7 @@ export function ProjectsPage() {
           <EmptyStateContainer>
             <p>{"// "}NO_REPOS_FOUND — reset filter</p>
             <button onClick={() => { filter.setActiveLanguage(null); filter.setActiveTopic(null); }}>
-              [ RESET FILTER ]
+              RESET FILTER
             </button>
           </EmptyStateContainer>
         )}

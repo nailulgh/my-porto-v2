@@ -353,6 +353,13 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memastikan *responsiveness* (wrap button) serta *accessibility* (`aria-label`) di komponen yang relevan.
 - Masalah: -
 - Selanjutnya: Phase 6.7 — Testing & Verifikasi.
+
+[10 Mei 2026] — Dokumentasi Update
+- Selesai:
+  - Mengubah referensi CLAUDE.md menjadi GEMINI.md di dalam file dokumentasi.
+  - Memperbarui `docs/structure.md` untuk merefleksikan perubahan struktur folder `src/data/` yang sekarang menggunakan `github.ts`.
+- Masalah: -
+- Selanjutnya: Lanjut ke Phase 6.7 — Testing & Verifikasi.
 ```
 
 ---

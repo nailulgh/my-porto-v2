@@ -119,7 +119,7 @@ menggunakan API github untuk identitas project dan rinciannya
 - 📱 **WhatsApp:** +62 856-4871-9610
 
 **Professional Profhttps://github.com/nailulgh/Portfolio-v2iles:**
-- 💼 **LinkedIn:** linkedin.com/in/muhammad-nailul-ghufron-majid-0b0b0b0b0/
+- 💼 **LinkedIn:** www.linkedin.com/in/nailul-ghufron-0a6901372
 - 💻 **GitHub:** github.com/nailulgh
 - 📸 **Instagram:** @ghufr.on011
 

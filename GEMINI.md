@@ -1,4 +1,4 @@
-# CLAUDE.md — Panduan AI Agent: Portfolio Cyberpunk
+# GEMINI.md — Panduan AI Agent: Portfolio Cyberpunk
 
 ## Identitas Project
 
