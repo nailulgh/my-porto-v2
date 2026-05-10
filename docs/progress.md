@@ -377,8 +377,17 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Menyusun panduan deployment lengkap di `docs/deploy.md`.
   - Finalisasi Phase 6.7 (Testing & Verifikasi).
   - Mempersiapkan konfigurasi Environment Variables untuk production.
-- Masalah: -
+- Masalah: Error saat deploy di Vercel (kemungkinan masalah routing SPA atau konflik direktori).
 - Selanjutnya: Melakukan build production dan deployment ke Vercel.
+
+[10 Mei 2026] — Deployment Troubleshooting
+- Selesai:
+  - Membuat `vercel.json` untuk menangani SPA routing (rewrites).
+  - Menghapus direktori kosong `src/pages/ProjectsPage` yang berpotensi konflik dengan `ProjectsPage.tsx`.
+  - Verifikasi build lokal (berhasil).
+  - Menyarankan penggunaan `CI=false` untuk menghindari build gagal karena warning.
+- Masalah: Vercel menggunakan Yarn secara otomatis padahal project menggunakan NPM.
+- Selanjutnya: Mencoba deploy ulang di Vercel.
 ```
 
 ---
