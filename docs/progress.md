@@ -398,6 +398,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memberikan instruksi error yang jelas di UI.
 - Masalah: Build Vercel gagal karena teks `//` dianggap sebagai komentar JSX.
 - Selanjutnya: Menunggu user menginput keys ke Vercel Settings > Environment Variables.
+
+[11 Mei 2026] — Header Responsiveness Fix
+- Selesai:
+  - Memperbaiki responsivitas Header pada tablet dengan menambahkan breakpoint menengah (1200px) untuk mengurangi padding.
+  - Menambahkan margin pada toggle switch agar tidak terlalu rapat dengan menu hamburger di perangkat tablet/mobile.
+  - Memperbaiki z-index pada navigation menu untuk memastikan overlap yang benar saat menu aktif.
+- Masalah: -
+- Selanjutnya: Monitoring feedback user.
 ```
 
 ---

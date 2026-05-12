@@ -18,8 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["@types/babel__generator/index.d.ts", "node"]
+    "jsx": "react-jsx"
   },
   "include": [
     "src"

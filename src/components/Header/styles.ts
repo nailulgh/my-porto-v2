@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { Theme } from "../../styles/theme";
 
-
-export const Container = styled.header`
+export const Container = styled.header<{ theme: Theme }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,6 +128,10 @@ export const Container = styled.header`
     transition: all 0.3s ease;
   }
 
+  @media (max-width: 1200px) {
+    padding: 1.8rem 5rem;
+  }
+
   @media (max-width: 960px) {
     padding: 1.8rem 2rem;
     gap: 1rem;
@@ -138,6 +142,7 @@ export const Container = styled.header`
 
     label {
       margin-left: auto;
+      margin-right: 1rem; /* Tambahkan jarak dari hamburger menu */
     }
   }
 
@@ -173,8 +178,6 @@ export const Container = styled.header`
   }
 
   @media (max-width: 960px){
-    /* padding handled above */
-
     .menu{
       display: block;
     }
@@ -195,6 +198,7 @@ export const Container = styled.header`
       top: 0;
       left: 0;
       transition: opacity 0.25s;
+      z-index: -1; /* Pastikan di bawah logo dan toggle saat terbuka */
 
       a.button{
         background-color: ${({ theme }) => theme.colors.accentCyan};
@@ -204,6 +208,7 @@ export const Container = styled.header`
       &.active{
         opacity: 1;
         visibility: visible;
+        z-index: 1001; /* Di atas segalanya saat aktif */
       }
     }
   }
