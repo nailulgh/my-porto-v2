@@ -406,6 +406,13 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memperbaiki z-index pada navigation menu untuk memastikan overlap yang benar saat menu aktif.
 - Masalah: -
 - Selanjutnya: Monitoring feedback user.
+
+[13 Mei 2026] — Update Hero Image
+- Selesai:
+  - Mengonversi `maincaracter.jpeg` menjadi format `.svg` dengan latar belakang transparan (menggunakan `rembg`).
+  - Menggantikan posisi `src/assets/illustration.svg` dengan gambar versi terbaru yang sudah tidak memiliki background.
+- Masalah: -
+- Selanjutnya: -
 ```
 
 ---
