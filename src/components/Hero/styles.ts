@@ -8,10 +8,18 @@ const glitch = keyframes`
   80% { transform: translate(1px, -2px); }
 `;
 
+const float = keyframes`
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+`;
+
 export const Container = styled.section`
-  padding-top: 15%;
+  padding-top: 12%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
   gap: 8rem;
   background: rgba(0,0,0,0);
   
@@ -95,7 +103,15 @@ export const Container = styled.section`
   .hero-image{
     img{
       max-width: 500px;
-      filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.2));
+      filter: drop-shadow(0 0 15px ${({ theme }) => theme.colors.accentCyan}44);
+      animation: ${float} 4s ease-in-out infinite;
+      transition: all 0.5s ease;
+      
+      &:hover {
+        filter: drop-shadow(0 0 30px ${({ theme }) => theme.colors.accentCyan}AA);
+        transform: scale(1.05);
+        animation-play-state: paused;
+      }
     }
   }
 

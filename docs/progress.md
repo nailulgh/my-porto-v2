@@ -407,10 +407,12 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: -
 - Selanjutnya: Monitoring feedback user.
 
-[13 Mei 2026] — Update Hero Image
+[13 Mei 2026] — Hero Section Design Refinement
 - Selesai:
-  - Mengonversi `maincaracter.jpeg` menjadi format `.svg` dengan latar belakang transparan (menggunakan `rembg`).
-  - Menggantikan posisi `src/assets/illustration.svg` dengan gambar versi terbaru yang sudah tidak memiliki background.
+  - Penyelarasan vertikal antara teks hero (nama) dan ilustrasi karakter utama menggunakan `align-items: center`.
+  - Penambahan animasi *levitation* (melayang) pada gambar karakter untuk menambah kesan futuristik/cyberpunk.
+  - Peningkatan efek visual *neon glow* pada karakter utama saat hover.
+  - Optimalisasi spacing dan tata letak hero section agar lebih seimbang secara visual.
 - Masalah: -
 - Selanjutnya: -
 ```
