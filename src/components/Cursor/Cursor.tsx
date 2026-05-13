@@ -5,9 +5,11 @@ export function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updatePosition = (e: MouseEvent) => {
+      if (!isVisible) setIsVisible(true);
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -46,7 +48,8 @@ export function Cursor() {
   return (
     <Container 
       style={{ 
-        transform: `translate3d(calc(${position.x}px - 50%), calc(${position.y}px - 50%), 0)` 
+        transform: `translate3d(calc(${position.x}px - 50%), calc(${position.y}px - 50%), 0)`,
+        opacity: isVisible ? 1 : 0
       }}
       className={`${isHovering ? 'hovering' : ''} ${isClicked ? 'clicked' : ''}`}
     >

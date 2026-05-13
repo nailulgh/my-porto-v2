@@ -59,7 +59,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 960px), (pointer: coarse) {
-    display: none; /* Disable custom cursor on touch devices and mobile */
+  @media (max-width: 480px) {
+    display: none; /* Disable custom cursor on mobile devices, but keep on tablet */
   }
 `;

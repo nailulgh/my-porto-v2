@@ -407,11 +407,20 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: -
 - Selanjutnya: Monitoring feedback user.
 
-[13 Mei 2026] — Cursor Bug Fix
+[13 Mei 2026] — Hero Section Design Refinement
 - Selesai:
-  - Memperbaiki bug kursor hilang pada perangkat tablet dan mobile.
-  - Mengatur `cursor: none` hanya berlaku pada layar desktop (> 960px).
-  - Mengembalikan kursor sistem default untuk layar sentuh agar navigasi tetap bisa dilakukan.
+  - Penyelarasan vertikal antara teks hero (nama) dan ilustrasi karakter utama menggunakan `align-items: center`.
+  - Penambahan animasi *levitation* (melayang) pada gambar karakter untuk menambah kesan futuristik/cyberpunk.
+  - Peningkatan efek visual *neon glow* pada karakter utama saat hover.
+  - Optimalisasi spacing dan tata letak hero section agar lebih seimbang secara visual.
+- Masalah: -
+- Selanjutnya: -
+
+[13 Mei 2026] — Custom Cursor Responsiveness Fix
+- Selesai:
+  - Memperbaiki bug cursor custom tidak muncul di tablet dengan menurunkan breakpoint `display: none` dari 960px ke 480px.
+  - Mengatur ulang `GlobalStyle` agar kursor sistem tetap muncul di perangkat mobile (phone) demi aksesibilitas.
+  - Refaktor komponen `Cursor.tsx` untuk menangani state visibilitas (mencegah kursor muncul di koordinat 0,0 sebelum digerakkan).
 - Masalah: -
 - Selanjutnya: -
 ```
