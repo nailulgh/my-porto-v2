@@ -423,6 +423,13 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Refaktor komponen `Cursor.tsx` untuk menangani state visibilitas (mencegah kursor muncul di koordinat 0,0 sebelum digerakkan).
 - Masalah: -
 - Selanjutnya: -
+
+[13 Mei 2026] — Vercel Build Fix
+- Selesai:
+  - Memperbaiki kesalahan *ESLint (react-hooks/exhaustive-deps)* pada komponen `Cursor.tsx` yang menyebabkan kegagalan build di lingkungan CI (Vercel).
+  - Verifikasi build lokal berhasil tanpa peringatan (Compiled successfully).
+- Masalah: -
+- Selanjutnya: -
 ```
 
 ---

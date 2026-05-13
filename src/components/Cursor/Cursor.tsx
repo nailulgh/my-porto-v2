@@ -9,7 +9,7 @@ export function Cursor() {
 
   useEffect(() => {
     const updatePosition = (e: MouseEvent) => {
-      if (!isVisible) setIsVisible(true);
+      setIsVisible(true);
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
