@@ -31,7 +31,10 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     background-color: ${({ theme }) => theme.colors.bgPrimary};
     color: ${({ theme }) => theme.colors.textPrimary};
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: none;
+    /* Hide default cursor only on desktop/devices with mouse */
+    @media (hover: hover) and (pointer: fine) {
+      cursor: none;
+    }
     
     /* Cyberpunk Background Texture */
     background-image: ${({ theme }) => theme.mode === 'light' ? `
@@ -61,8 +64,10 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     font-weight: 400;
   }
 
-  a, button, .button, input[type="submit"], input[type="checkbox"] + label {
-    cursor: none !important;
+  @media (hover: hover) and (pointer: fine) {
+    a, button, .button, input[type="submit"], input[type="checkbox"] + label {
+      cursor: none !important;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

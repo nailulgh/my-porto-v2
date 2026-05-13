@@ -407,12 +407,13 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: -
 - Selanjutnya: Monitoring feedback user.
 
-[13 Mei 2026] — Hero Section Design Refinement
+[13 Mei 2026] — Hero Section Design Refinement & Cursor Bug Fix
 - Selesai:
   - Penyelarasan vertikal antara teks hero (nama) dan ilustrasi karakter utama menggunakan `align-items: center`.
   - Penambahan animasi *levitation* (melayang) pada gambar karakter untuk menambah kesan futuristik/cyberpunk.
   - Peningkatan efek visual *neon glow* pada karakter utama saat hover.
-  - Optimalisasi spacing dan tata letak hero section agar lebih seimbang secara visual.
+  - Fix: Memperbaiki "bug cursor" pada tablet/perangkat sentuh dengan membatasi `cursor: none` hanya pada perangkat dengan *fine pointer* (mouse).
+  - Fix: Menyembunyikan komponen custom cursor pada perangkat dengan *coarse pointer* (touchscreen) untuk menghindari ghosting/glitch.
 - Masalah: -
 - Selanjutnya: -
 ```
