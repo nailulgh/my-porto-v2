@@ -438,6 +438,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memperbaiki ukuran font link BackButton, deskripsi header, count info, dan hasil filter di halaman `/projects`.
 - Masalah: -
 - Selanjutnya: -
+
+[19 Mei 2026] — Project Section Hover Effect Fix
+- Selesai:
+  - Memodifikasi efek hover pada komponen Card proyek (`CardContainer` di `ProjectCard.tsx`).
+  - Mengubah warna border aktif dari Cyan (`borderActive`) menjadi Magenta/Pink (`accentMagenta`).
+  - Mengubah bayangan glow hover dari Cyan (`glowCyanMedium`) menjadi Magenta/Pink (`glowMagenta`).
+- Masalah: -
+- Selanjutnya: -
 ```
 
 ---

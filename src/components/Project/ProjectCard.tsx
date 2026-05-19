@@ -20,8 +20,8 @@ export const CardContainer = styled.div`
   height: 100%;
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.borderActive};
-    box-shadow: ${({ theme }) => theme.shadows.glowCyanMedium};
+    border-color: ${({ theme }) => theme.colors.accentMagenta};
+    box-shadow: ${({ theme }) => theme.shadows.glowMagenta};
     transform: translateY(-8px);
   }
 `;
