@@ -20,41 +20,42 @@ export const CardContainer = styled.div`
   height: 100%;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.accentMagenta};
-    border-color: ${({ theme }) => theme.colors.accentMagenta};
-    box-shadow: ${({ theme }) => theme.shadows.glowMagenta};
+    background: #E22470;
+    border-color: #E22470;
+    box-shadow: 0 0 15px rgba(226, 36, 112, 0.6);
     transform: translateY(-8px);
 
     svg.folder {
-      color: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
+      color: #ffffff;
     }
 
     .project-links a img {
-      filter: ${({ theme }) => theme.mode === 'dark' ? 'brightness(0)' : 'brightness(0) invert(1)'};
+      filter: brightness(0) invert(1);
       opacity: 1;
     }
 
     .repo-name {
-      color: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
+      color: #ffffff;
     }
 
     .description {
-      color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+      color: #ffffff;
+      opacity: 0.95;
     }
 
     footer {
-      border-top-color: ${({ theme }) => theme.mode === 'dark' ? 'rgba(10, 0, 20, 0.15)' : 'rgba(255, 255, 255, 0.3)'};
+      border-top-color: rgba(255, 255, 255, 0.3);
     }
 
     .topic-badge {
       background: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
-      color: ${({ theme }) => theme.colors.accentMagenta};
+      color: ${({ theme }) => theme.mode === 'dark' ? '#ffffff' : '#E22470'};
     }
 
     .footer-stats {
-      color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+      color: #ffffff;
       svg {
-        color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+        color: #ffffff;
       }
     }
   }
@@ -226,7 +227,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
         setLoadingReadme(true);
         const cacheKey = `readme_v3_${repo.id}`;
         const cached = sessionStorage.getItem(cacheKey);
-        
+
         if (cached) {
           setDescription(cached);
           setLoadingReadme(false);
@@ -256,17 +257,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
             // Fallback for older environments
             decoded = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
           }
-          
+
           // Split by lines and filter out empty ones
           const lines = decoded.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-          
+
           let foundContent = "";
           for (let line of lines) {
             // Skip lines that are purely headers or too short
             if (line.startsWith('#') && line.split(' ').length < 3) continue;
-            
+
             // Skip ASCII Art (Box Drawing \u2500-\u257F and Block Elements \u2580-\u259F)
-            const asciiArtChars = /[\u2500-\u259F]/; 
+            const asciiArtChars = /[\u2500-\u259F]/;
             if (asciiArtChars.test(line)) continue;
 
             // Clean the line first to see if it has actual text content
@@ -322,7 +323,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
           )}
         </ProjectLinks>
       </Header>
-      
+
       <Body>
         <RepoName className="repo-name">{repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</RepoName>
         {loadingReadme && description === "— no description —" ? (
