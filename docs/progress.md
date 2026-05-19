@@ -430,6 +430,14 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Verifikasi build lokal berhasil tanpa peringatan (Compiled successfully).
 - Masalah: -
 - Selanjutnya: -
+
+[19 Mei 2026] — Project Section Font Size Fix
+- Selesai:
+  - Memperbaiki ukuran font (font-size) pada bagian "My Projects" dan halaman `/projects` agar lebih mudah dibaca (mengatasi base font-size 62.5% html).
+  - Menyesuaikan ukuran font nama repo, deskripsi (body p), badge topik (TopicBadge), statistik (FooterStats), serta tombol filter (FilterBtn) dan tombol view all (ViewAllButton).
+  - Memperbaiki ukuran font link BackButton, deskripsi header, count info, dan hasil filter di halaman `/projects`.
+- Masalah: -
+- Selanjutnya: -
 ```
 
 ---

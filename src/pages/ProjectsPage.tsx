@@ -18,7 +18,7 @@ const BackButton = styled(Link)`
   align-items: center;
   color: ${({ theme }) => theme.colors.textSecondary};
   font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-decoration: none;
   margin-bottom: 3rem;
   transition: all 0.2s ease;
@@ -45,13 +45,13 @@ const HeaderSection = styled.section`
   p {
     font-family: ${({ theme }) => theme.fonts.mono};
     color: ${({ theme }) => theme.colors.textSecondary};
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0.75rem;
   }
 
   .count {
     color: ${({ theme }) => theme.colors.accentMagenta};
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -64,7 +64,7 @@ const FilterSection = styled.section`
   .results-count {
     margin-top: 1.5rem;
     font-family: ${({ theme }) => theme.fonts.mono};
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: ${({ theme }) => theme.colors.textSecondary};
   }
 `;

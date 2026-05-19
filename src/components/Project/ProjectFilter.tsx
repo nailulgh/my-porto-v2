@@ -17,7 +17,7 @@ const FilterBtn = styled.button<{ $active: boolean }>`
   color: ${({ theme, $active }) =>
     $active ? theme.colors.accentCyan : theme.colors.textSecondary};
   font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease;

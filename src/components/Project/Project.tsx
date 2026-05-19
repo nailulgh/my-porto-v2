@@ -11,7 +11,7 @@ const ViewAllButton = styled(Link)`
   margin-top: 3rem;
   padding: 1rem 2.5rem;
   font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: ${({ theme }) => theme.colors.accentCyan};
   border: 1px solid ${({ theme }) => theme.colors.accentCyan};
   border-radius: 4px;

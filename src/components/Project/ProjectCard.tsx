@@ -66,7 +66,7 @@ const ProjectLinks = styled.div`
 const RepoName = styled.h3`
   font-family: ${({ theme }) => theme.fonts.mono};
   color: ${({ theme }) => theme.colors.accentCyan};
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   margin: 16px 0 12px;
   word-break: break-word;
   line-height: 1.3;
@@ -78,7 +78,7 @@ const Body = styled.div`
   
   p {
     color: ${({ theme }) => theme.colors.textSecondary};
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.body};
@@ -95,7 +95,7 @@ const TopicsContainer = styled.div`
 const TopicBadge = styled.span`
   background: ${({ theme }) => theme.colors.bgElevated};
   color: ${({ theme }) => theme.colors.accentMagenta};
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   padding: 6px 12px;
   border-radius: ${({ theme }) => theme.radius.sm};
   font-family: ${({ theme }) => theme.fonts.mono};
@@ -116,7 +116,7 @@ const FooterStats = styled.div`
   align-items: center;
   gap: 24px;
   font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: ${({ theme }) => theme.colors.textSecondary};
   margin-top: 12px;
 `;
@@ -157,7 +157,7 @@ const ErrorContainer = styled(CardContainer)`
   p {
     color: ${({ theme }) => theme.colors.accentMagenta};
     font-family: ${({ theme }) => theme.fonts.mono};
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 `;
 
