@@ -439,11 +439,11 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: -
 - Selanjutnya: -
 
-[19 Mei 2026] — Project Section Hover Effect Fix
+[19 Mei 2026] — Project Card Hover Effect Update
 - Selesai:
-  - Memodifikasi efek hover pada komponen Card proyek (`CardContainer` di `ProjectCard.tsx`).
-  - Mengubah warna border aktif dari Cyan (`borderActive`) menjadi Magenta/Pink (`accentMagenta`).
-  - Mengubah bayangan glow hover dari Cyan (`glowCyanMedium`) menjadi Magenta/Pink (`glowMagenta`).
+  - Memodifikasi efek hover pada `ProjectCard` (`CardContainer`) agar mengubah warna latar belakang (Background Color) menjadi warna merah muda/magenta semi-transparan (`rgba(255, 0, 170, 0.18)` untuk dark mode, dan `rgba(204, 0, 119, 0.12)` untuk light mode).
+  - Mengubah warna border hover menjadi `accentMagenta` dan bayangan glow menjadi `glowMagenta`.
+  - Menambahkan transisi warna pada ikon folder (`svg.folder`) agar berubah menjadi `accentMagenta` secara mulus saat kartu di-hover.
 - Masalah: -
 - Selanjutnya: -
 ```

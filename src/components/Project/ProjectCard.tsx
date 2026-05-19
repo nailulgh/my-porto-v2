@@ -20,9 +20,14 @@ export const CardContainer = styled.div`
   height: 100%;
 
   &:hover {
+    background: ${({ theme }) => theme.mode === 'dark' ? 'rgba(255, 0, 170, 0.18)' : 'rgba(204, 0, 119, 0.12)'};
     border-color: ${({ theme }) => theme.colors.accentMagenta};
     box-shadow: ${({ theme }) => theme.shadows.glowMagenta};
     transform: translateY(-8px);
+
+    svg.folder {
+      color: ${({ theme }) => theme.colors.accentMagenta};
+    }
   }
 `;
 
@@ -36,6 +41,7 @@ const Header = styled.header`
     width: 45px;
     height: 45px;
     color: ${({ theme }) => theme.colors.accentCyan};
+    transition: color 0.3s ease;
   }
 `;
 
