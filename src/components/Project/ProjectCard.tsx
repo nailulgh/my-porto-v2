@@ -20,13 +20,42 @@ export const CardContainer = styled.div`
   height: 100%;
 
   &:hover {
-    background: ${({ theme }) => theme.mode === 'dark' ? 'rgba(255, 0, 170, 0.18)' : 'rgba(204, 0, 119, 0.12)'};
+    background: ${({ theme }) => theme.colors.accentMagenta};
     border-color: ${({ theme }) => theme.colors.accentMagenta};
     box-shadow: ${({ theme }) => theme.shadows.glowMagenta};
     transform: translateY(-8px);
 
     svg.folder {
+      color: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
+    }
+
+    .project-links a img {
+      filter: ${({ theme }) => theme.mode === 'dark' ? 'brightness(0)' : 'brightness(0) invert(1)'};
+      opacity: 1;
+    }
+
+    .repo-name {
+      color: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
+    }
+
+    .description {
+      color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+    }
+
+    footer {
+      border-top-color: ${({ theme }) => theme.mode === 'dark' ? 'rgba(10, 0, 20, 0.15)' : 'rgba(255, 255, 255, 0.3)'};
+    }
+
+    .topic-badge {
+      background: ${({ theme }) => theme.mode === 'dark' ? '#0a0014' : '#ffffff'};
       color: ${({ theme }) => theme.colors.accentMagenta};
+    }
+
+    .footer-stats {
+      color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+      svg {
+        color: ${({ theme }) => theme.mode === 'dark' ? '#140028' : '#ffffff'};
+      }
     }
   }
 `;
@@ -41,7 +70,6 @@ const Header = styled.header`
     width: 45px;
     height: 45px;
     color: ${({ theme }) => theme.colors.accentCyan};
-    transition: color 0.3s ease;
   }
 `;
 
@@ -283,7 +311,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
           <title>Folder</title>
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
         </svg>
-        <ProjectLinks>
+        <ProjectLinks className="project-links">
           <a href={repo.html_url} target="_blank" rel="noreferrer" aria-label="GitHub Repository">
             <img src={githubIcon} alt="GitHub" />
           </a>
@@ -296,14 +324,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
       </Header>
       
       <Body>
-        <RepoName>{repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</RepoName>
+        <RepoName className="repo-name">{repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</RepoName>
         {loadingReadme && description === "— no description —" ? (
           <div style={{ marginTop: '12px' }}>
             <SkeletonBox $mb="8px" />
             <SkeletonBox $width="80%" />
           </div>
         ) : (
-          <p>{description}</p>
+          <p className="description">{description}</p>
         )}
       </Body>
 
@@ -311,14 +339,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
         {repo.topics && repo.topics.length > 0 && (
           <TopicsContainer>
             {repo.topics.slice(0, 4).map(topic => (
-              <TopicBadge key={topic}>#{topic}</TopicBadge>
+              <TopicBadge className="topic-badge" key={topic}>#{topic}</TopicBadge>
             ))}
             {repo.topics.length > 4 && (
-              <TopicBadge>+{repo.topics.length - 4}</TopicBadge>
+              <TopicBadge className="topic-badge">+{repo.topics.length - 4}</TopicBadge>
             )}
           </TopicsContainer>
         )}
-        <FooterStats>
+        <FooterStats className="footer-stats">
           <span style={{ display: 'flex', alignItems: 'center' }}>
             <LanguageDot $color={getLanguageColor(repo.language || 'Other')} />
             {repo.language || 'OTHER'}

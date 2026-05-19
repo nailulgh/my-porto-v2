@@ -439,11 +439,11 @@ Gunakan bagian ini untuk mencatat progress per sesi:
 - Masalah: -
 - Selanjutnya: -
 
-[19 Mei 2026] — Project Card Hover Effect Update
+[19 Mei 2026] — Project Card Hover Effect Customization
 - Selesai:
-  - Memodifikasi efek hover pada `ProjectCard` (`CardContainer`) agar mengubah warna latar belakang (Background Color) menjadi warna merah muda/magenta semi-transparan (`rgba(255, 0, 170, 0.18)` untuk dark mode, dan `rgba(204, 0, 119, 0.12)` untuk light mode).
-  - Mengubah warna border hover menjadi `accentMagenta` dan bayangan glow menjadi `glowMagenta`.
-  - Menambahkan transisi warna pada ikon folder (`svg.folder`) agar berubah menjadi `accentMagenta` secara mulus saat kartu di-hover.
+  - Mengubah Hover Effect pada kartu proyek (Project Card) agar mengubah warna latar belakang (Background Color) menjadi warna merah muda/magenta cerah (`accentMagenta`).
+  - Menambahkan kelas-kelas CSS (`.repo-name`, `.description`, `.topic-badge`, `.footer-stats`, `.project-links`) untuk mengontrol warna teks, ikon, folder SVG, dan statistik agar kontras dan sangat terbaca pada mode gelap maupun mode terang saat kursor diarahkan ke kartu.
+  - Memasang efek bayangan glow warna magenta (`glowMagenta`) dan translasi sumbu Y pada efek hover kartu.
 - Masalah: -
 - Selanjutnya: -
 ```
