@@ -446,6 +446,15 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Menyesuaikan visual badge topik (`TopicBadge`) saat hover (latar belakang gelap `#0a0014` dengan teks putih pada dark mode, dan latar belakang putih dengan teks pink pada light mode) untuk efek cyberpunk kontras yang premium.
 - Masalah: -
 - Selanjutnya: -
+
+[27 Mei 2026] — Mobile Contact Layout Fix & Copy-to-Clipboard
+- Selesai:
+  - Memperbaiki overflow email text pada section Contact di perangkat mobile (Android) dengan menambahkan `word-break: break-all` pada elemen anchor link.
+  - Menambahkan breakpoint media query `max-width: 480px` untuk mengurangi padding container kontak menjadi `1.6rem 1.6rem`, mengecilkan gap menjadi `1rem`, dan menurunkan ukuran font email menjadi `1.2rem` untuk memastikan email terbungkus rapi tanpa merusak tata letak.
+  - Menambahkan fitur Salin ke Clipboard otomatis ketika alamat email atau ikon email diklik, serta memunculkan pemberitahuan (toast notification) sukses.
+  - Memindahkan `ToastContainer` ke tingkat aplikasi utama (`App.tsx`) untuk mendukung notifikasi global dan mencegah duplikasi container di subkomponen form dan kontak.
+- Masalah: -
+- Selanjutnya: -
 ```
 
 ---

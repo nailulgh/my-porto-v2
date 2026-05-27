@@ -1,6 +1,6 @@
 import { Container, ContainerSucces } from './styles'
 import { useForm, ValidationError } from '@formspree/react'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useEffect, useState } from 'react'
 import validator from 'validator'
@@ -54,7 +54,6 @@ export function Form() {
         >
           Back to the top
         </button>
-        <ToastContainer />
       </ContainerSucces>
     )
   }
@@ -100,7 +99,6 @@ export function Form() {
           Submit
         </button>
       </form>
-      <ToastContainer />
     </Container>
   )
 }

@@ -7,6 +7,7 @@ import { GlobalStyle } from './styles/global'
 import { Analytics } from "@vercel/analytics/react"
 import { AppThemeProvider } from './context/ThemeContext'
 import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const Main = lazy(() => import('./components/Main/Main').then(module => ({ default: module.Main })));
@@ -29,6 +30,7 @@ function App() {
       <GlobalStyle></GlobalStyle>
       <BrowserRouter>
         <Cursor />
+        <ToastContainer />
         {isLoading ? (
           <Loader />
         ) : (

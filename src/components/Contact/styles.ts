@@ -56,6 +56,7 @@ export const Container = styled.section`
         font-size: 1.4rem;
         transition: color 0.3s ease;
         text-decoration: none;
+        word-break: break-all;
       }
       
       &:hover{
@@ -77,6 +78,19 @@ export const Container = styled.section`
       flex-direction: column;
       & > div{
         width: 100%;
+      }
+    }
+  }
+
+  @media(max-width: 480px){
+    .contacts{
+      gap: 1.5rem;
+      & > div{
+        padding: 1.6rem 1.6rem;
+        gap: 1rem;
+        a{
+          font-size: 1.2rem;
+        }
       }
     }
   }
