@@ -102,7 +102,10 @@ export const Container = styled.section`
 
   .hero-image{
     img{
+      width: 100%;
+      height: auto;
       max-width: 500px;
+      aspect-ratio: 1 / 1;
       filter: drop-shadow(0 0 15px ${({ theme }) => theme.colors.accentCyan}44);
       animation: ${float} 4s ease-in-out infinite;
       transition: all 0.5s ease;

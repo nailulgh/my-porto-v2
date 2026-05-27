@@ -2,33 +2,113 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="Images/favicon.png" type="image/png" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech&family=Share+Tech+Mono&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- === BASIC META === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="google-site-verification" content="jHjrlbXMgkR_mXm0bXqTBAbvF_9PWArh9vdThalELpc" />
+
+  <!-- === TITLE & DESCRIPTION === -->
+  <title>Nailul Ghufron — Web Developer & AI Enthusiast | Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Nailul Ghufron Majid. Informatics student at UIN Malang specializing in web development, React, and AI-powered applications." />
+  <meta name="keywords" content="Nailul Ghufron, Muhammad Nailul Ghufron Majid, Portfolio, Informatics Student, Web Developer, AI Integration, React Developer, UIN Malang" />
+  <meta name="author" content="Muhammad Nailul Ghufron Majid" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- === CANONICAL === -->
+  <link rel="canonical" href="https://muhammadnailulghufronmajid.vercel.app/" />
+
+  <!-- === OPEN GRAPH === -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muhammadnailulghufronmajid.vercel.app/" />
+  <meta property="og:site_name" content="Nailul Ghufron Portfolio" />
+  <meta property="og:title" content="Nailul Ghufron — Web Developer & AI Enthusiast" />
+  <meta property="og:description" content="Portfolio of Muhammad Nailul Ghufron Majid. Informatics student at UIN Malang specializing in web development, React, and AI-powered applications." />
+  <meta property="og:image" content="https://muhammadnailulghufronmajid.vercel.app/Images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nailul Ghufron Portfolio Preview" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- === TWITTER CARD === -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nailul Ghufron — Web Developer & AI Enthusiast" />
+  <meta name="twitter:description" content="Portfolio of Muhammad Nailul Ghufron Majid. Informatics student at UIN Malang specializing in web development, React, and AI-powered applications." />
+  <meta name="twitter:image" content="https://muhammadnailulghufronmajid.vercel.app/Images/og-image.jpg" />
+
+  <!-- === FAVICON === -->
+  <link rel="icon" href="/Images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/Images/favicon.png" />
+
+  <!-- === SITEMAP === -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-  <title>Muhammad Nailul Ghufron Majid | Cyberpunk Portfolio</title>
-  <meta charset="utf-8" />
-  <meta property="og:title" content="Muhammad Nailul Ghufron Majid | Cyberpunk Portfolio">
-  <meta name="keywords"
-    content="Nailul Ghufron, Muhammad Nailul Ghufron Majid, Portfolio, Informatics Student, Web Developer, AI Integration, React Developer">
-  <meta property="og:description"
-    content="Portfolio of Muhammad Nailul Ghufron Majid. An Informatics student with a strong passion for building web applications and integrating intelligent systems."
-    name="description">
-  <meta property="og:image:type" content="image/webp">
-  <meta property="og:image" content="Images/profil.webp">
-  <meta name="image" property="og:image" content="Images/profil.webp">
-  <meta property="og:image:width" content="800">
-  <meta property="og:image:height" content="600">
-  <meta property="og:type" content="website">
-  <meta property="article:author" content="https://github.com/nailulgh">
-  <meta property="og:site_name" content="nailulgh.github.io">
-  <meta property="og:locale" content="id_ID">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- === FONT PRECONNECT (taruh SEBELUM stylesheet) === -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- === FONTS === -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech&family=Share+Tech+Mono&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech&family=Share+Tech+Mono&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+  <!-- === STRUCTURED DATA (JSON-LD) === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://muhammadnailulghufronmajid.vercel.app/#person",
+        "name": "Muhammad Nailul Ghufron Majid",
+        "alternateName": "Nailul Ghufron",
+        "url": "https://muhammadnailulghufronmajid.vercel.app/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://muhammadnailulghufronmajid.vercel.app/Images/profil.webp",
+          "width": 800,
+          "height": 600
+        },
+        "jobTitle": "Informatics Student & Web Developer",
+        "description": "Informatics student at UIN Maulana Malik Ibrahim Malang with a passion for building web applications and integrating AI systems.",
+        "email": "muhammadnailulghufronmajid@gmail.com",
+        "telephone": "+6285648719610",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Malang",
+          "addressCountry": "ID"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "UIN Maulana Malik Ibrahim Malang",
+          "url": "https://www.uin-malang.ac.id/"
+        },
+        "knowsAbout": ["React", "TypeScript", "Web Development", "AI Integration", "JavaScript"],
+        "sameAs": [
+          "https://github.com/nailulgh",
+          "https://www.linkedin.com/in/nailul-ghufron-0a6901372",
+          "https://www.instagram.com/ghufr.on011"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://muhammadnailulghufronmajid.vercel.app/#website",
+        "url": "https://muhammadnailulghufronmajid.vercel.app/",
+        "name": "Nailul Ghufron Portfolio",
+        "description": "Personal portfolio website of Muhammad Nailul Ghufron Majid — Web Developer and AI Enthusiast.",
+        "author": {
+          "@id": "https://muhammadnailulghufronmajid.vercel.app/#person"
+        },
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://muhammadnailulghufronmajid.vercel.app/#person"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>

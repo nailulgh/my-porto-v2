@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Blokir assets yang tidak perlu diindex
+Disallow: /static/
+
+# Sitemap declaration (wajib)
+Sitemap: https://muhammadnailulghufronmajid.vercel.app/sitemap.xml

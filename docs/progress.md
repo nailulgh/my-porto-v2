@@ -455,6 +455,54 @@ Gunakan bagian ini untuk mencatat progress per sesi:
   - Memindahkan `ToastContainer` ke tingkat aplikasi utama (`App.tsx`) untuk mendukung notifikasi global dan mencegah duplikasi container di subkomponen form dan kontak.
 - Masalah: -
 - Selanjutnya: -
+- Selanjutnya: -
+
+[27 Mei 2026] — SEO Phase 1 (Technical SEO Foundation)
+- Selesai:
+  - Memperbaiki `public/sitemap.xml` agar mengarah ke domain vercel sendiri (muhammadnailulghufronmajid.vercel.app) dan menambahkan sitemap untuk `/projects`.
+  - Membuat `public/robots.txt` agar Googlebot tahu instruksi crawling yang benar dan letak sitemap.
+  - Menambahkan tag `<link rel="canonical">` di `public/index.html` untuk mencegah duplikasi URL.
+- Masalah: -
+- Selanjutnya: Lanjut ke SEO Phase 2 (On-Page SEO & Social Sharing)
+
+[27 Mei 2026] — SEO Phase 2 (On-Page SEO & Social Sharing)
+- Selesai:
+  - Mengupdate meta tags `public/index.html` secara komprehensif, termasuk Basic Meta, Title & Description, Open Graph (OG) tags lengkap, dan Twitter Card tags.
+  - Memperbaiki URL `og:image` menjadi URL absolut yang dapat dibaca oleh platform media sosial.
+  - Mengatur `og:site_name` dengan benar.
+  - Generate dan tambahkan file `og-image.jpg` (1200x630px) bergaya cyberpunk ke direktori `public/Images/` untuk social sharing (preview WhatsApp, Twitter, LinkedIn).
+- Masalah: -
+- Selanjutnya: Lanjut ke SEO Phase 3 (Structured Data JSON-LD)
+
+[27 Mei 2026] — SEO Phase 3 (Structured Data JSON-LD)
+- Selesai:
+  - Mengimplementasikan Schema Markup (JSON-LD) bertipe `Person` dan `WebSite` ke dalam `public/index.html`.
+  - Menambahkan data relevan secara lengkap seperti kontak, media sosial (sameAs), deskripsi portofolio, dan alumni informasi (UIN Maulana Malik Ibrahim Malang).
+  - Skema markup ini akan membantu *Google Knowledge Panel* untuk lebih mudah memahami informasi terstruktur situs portofolio.
+- Masalah: -
+- Selanjutnya: Lanjut ke SEO Phase 4 (Core Web Vitals & Performa)
+
+[27 Mei 2026] — SEO Phase 4 (Core Web Vitals & Performa)
+- Selesai:
+  - Mengubah metode pemanggilan font Google (Orbitron & Share Tech) di `index.html` menggunakan atribut `rel="preload"` untuk optimasi **LCP (Largest Contentful Paint)**.
+  - Menambahkan atribut `width` dan `height` eksplisit pada gambar `Hello.gif` dan `Illustration` di komponen `Hero.tsx` untuk mencegah **CLS (Cumulative Layout Shift)**.
+  - Memperbarui `styles.ts` pada hero image dengan `width: 100%`, `height: auto`, dan `aspect-ratio: 1 / 1` agar ruang gambar sudah direservasi secara presisi oleh browser sebelum gambar selesai dimuat.
+- Masalah: -
+- Selanjutnya: Lanjut ke SEO Phase 5 (Monitoring & Iterasi) / Google Search Console Setup
+
+[27 Mei 2026] — SEO Phase 5 (Monitoring & Iterasi / Pre-Launch Check)
+- Selesai:
+  - Menyelesaikan seluruh checklist Pre-Launch Final di sisi *codebase* (Technical, On-Page, Structured Data, & Performa).
+  - Portofolio sekarang 100% siap untuk di-deploy ke _production_ (Vercel).
+- Masalah: Verifikasi kepemilikan (ownership) di Google Search Console belum dapat diselesaikan oleh AI karena memerlukan akses manual user ke akun Google.
+- Selanjutnya: User melakukan `git push` ke branch utama untuk men-deploy perubahan ke Vercel, lalu mendaftar Google Search Console dan memberikan file verifikasi (HTML) jika diperlukan.
+
+[27 Mei 2026] — Implementasi Verifikasi Google Search Console
+- Selesai:
+  - Menambahkan file `public/google22b078241c9c4c6f.html` untuk HTML file verification method.
+  - Menambahkan meta tag `<meta name="google-site-verification" ... />` di `public/index.html` sebagai verifikasi alternatif yang kuat.
+- Masalah: -
+- Selanjutnya: Menunggu 3-7 hari setelah deployment agar Googlebot mencrawl sitemap dan index situs secara penuh.
 ```
 
 ---
