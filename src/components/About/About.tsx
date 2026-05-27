@@ -18,7 +18,7 @@ export function About() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.1 * 1000}>
           <p>
-            Hi there! I'm Nailul Ghufron, an Informatics student with a strong passion for building web applications and integrating intelligent systems.
+            Hi there! I'm Muhammad Nailul Ghufron Majid, known as Nailul, an Informatics student with a strong passion for building web applications and integrating intelligent systems.
           </p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000} style={{ marginTop: "2rem", marginBottom: "2rem" }}>

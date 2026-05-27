@@ -68,6 +68,7 @@ export const Container = styled.header<{ theme: Theme }>`
     position: relative;
     cursor: pointer;
     display: none;
+    z-index: 1002;
 
     &:before{
       bottom: 0.5rem;

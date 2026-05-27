@@ -39,6 +39,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.textPrimary};
     position: relative;
     text-shadow: ${({ theme }) => theme.shadows.glowCyanMedium};
+    text-align: center;
     
     &::before, &::after {
       content: attr(data-text);
